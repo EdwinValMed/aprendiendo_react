@@ -2,27 +2,28 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Usuario from "./Componentes/Usuario";
 import FormularioInicioSesion from "./Componentes/FormularioInicioSesion";
-import contador from "./Componentes/contador";
+import ContadorFuncional from "./Componentes/ContadorFuncional";
+import "./index.css";
 
 const nombre = "gambito";
 
 const App = () => {
-  const [sesion, cambiarSesion] = useState(false);
+  const [sesion, cambiarSesion] = useState(true);
 
   return (
-    <div>
+    <div className="contenedor">
       {sesion === true ? (
         <div>
           <Usuario />
+          <ContadorFuncional />
           <button onClick={() => cambiarSesion(false)}>Cerrar sesion</button>
         </div>
       ) : (
         <>
-          <h1> Debe de iniciar Sesion</h1>
           <p>{nombre}</p>
           <p>debes de completar</p>
           <FormularioInicioSesion cambiar={cambiarSesion} />
-          <contador />
+
           {/* <button onClick={() => cambiarSesion(true)}>Iniciar sesion</button> */}
         </>
       )}
