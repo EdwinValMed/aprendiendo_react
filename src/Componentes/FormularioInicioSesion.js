@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./FormularioInicioSesion.css";
+import styles from "./FormularioInicioSesion.module.css";
+import Boton from "../elemento/Boton";
 
 const FormularioInicioSesion = (props) => {
   const [usuario, cambiarUsuario] = useState("");
@@ -34,10 +35,10 @@ const FormularioInicioSesion = (props) => {
   };
 
   return (
-    <form action="" onSubmit={onSubmit} className="formulario">
+    <form action="" onSubmit={onSubmit} className={styles.formulario}>
       <div>
         <h1 className="encabezado"> Debe de iniciar Sesion</h1>
-        <label htmlFor="usuario" className="label">
+        <label htmlFor="usuario" className={styles.label}>
           Usuario
         </label>
         <input
@@ -46,11 +47,11 @@ const FormularioInicioSesion = (props) => {
           id="usuario"
           value={usuario}
           onChange={onChange}
-          className="input"
+          className={styles.input}
         />
       </div>
       <div>
-        <label htmlFor="password" className="label">
+        <label htmlFor="password" className={styles.label}>
           Contraseña
         </label>
         <input
@@ -59,12 +60,13 @@ const FormularioInicioSesion = (props) => {
           id="password"
           value={password}
           onChange={onChange}
-          className="input"
+          className={styles.input}
         />
       </div>
-      <button type="submit" className="boton">
+      {/* <button type="submit" className={styles.boton}>
         Iniciar Sesion
-      </button>
+      </button> */}
+      <Boton> Iniciar Sesion </Boton>
     </form>
   );
 };

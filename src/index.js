@@ -4,6 +4,7 @@ import Usuario from "./Componentes/Usuario";
 import FormularioInicioSesion from "./Componentes/FormularioInicioSesion";
 import ContadorFuncional from "./Componentes/ContadorFuncional";
 import "./index.css";
+import Boton from "./elemento/Boton";
 
 const nombre = "gambito";
 
@@ -16,7 +17,10 @@ const App = () => {
         <div>
           <Usuario />
           <ContadorFuncional />
-          <button onClick={() => cambiarSesion(false)}>Cerrar sesion</button>
+          {/* <button onClick={() => cambiarSesion(false)}>Cerrar sesion</button> */}
+          <Boton largo onClick={() => cambiarSesion(false)}>
+            Cerrar Sesion
+          </Boton>
         </div>
       ) : (
         <>

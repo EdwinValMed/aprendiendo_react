@@ -1,4 +1,4 @@
-.boton2 {
+.boton {
   background: #000;
   color: #fff;
   display: inline-block;
@@ -12,7 +12,7 @@
   margin-right: 10px;
 }
 
-.boton2:hover {
+.boton:hover {
   background: #44a559;
   color: #fff;
 }
