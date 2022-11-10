@@ -5,6 +5,8 @@ import FormularioInicioSesion from "./Componentes/FormularioInicioSesion";
 import ContadorFuncional from "./Componentes/ContadorFuncional";
 import "./index.css";
 import Boton from "./elemento/Boton";
+import EjemploUseReducer from "./Componentes/EjemploUseReduce";
+import Blog from "./Componentes/Blog";
 
 const nombre = "gambito";
 
@@ -16,7 +18,9 @@ const App = () => {
       {sesion === true ? (
         <div>
           <Usuario />
-          <ContadorFuncional />
+          <Blog />
+          <EjemploUseReducer />
+          {/* <ContadorFuncional /> */}
           {/* <button onClick={() => cambiarSesion(false)}>Cerrar sesion</button> */}
           <Boton largo onClick={() => cambiarSesion(false)}>
             Cerrar Sesion
